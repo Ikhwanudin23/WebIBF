@@ -35,7 +35,16 @@ class DebitTumpahRTController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $debitt = DebitTumpahRT::create([
+            'ketinggian' => $request->ketinggian,
+            'status' => $request->status,
+        ]);
+
+        return response()->json([
+            'message' => 'berhasil',
+            'status' => 1,
+            'data' => $debitt
+        ], 201);
     }
 
     /**

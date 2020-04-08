@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\SungaiRT;
+use App\Response;
 use Illuminate\Http\Request;
 
 class SungaiRTController extends Controller
@@ -14,7 +15,7 @@ class SungaiRTController extends Controller
      */
     public function index()
     {
-        //
+        return response() -> json(Response::transform(SungaiRT::get(), "ok" , 1), 200);
     }
 
     /**
@@ -55,12 +56,12 @@ class SungaiRTController extends Controller
      */
     public function show(SungaiRT $sungaiRT, $id)
     {
-        $sungai = SungaiRT::find($id);
-        if (is_null($sungai)) {
+        $sungaiRT = SungaiRT::find($id);
+        if (is_null($sungaiRT)) {
             return response()->json(array('message'=>'
                 record not found', 'status'=>0),201);
         }
-        return response() -> json(Response::transform($sungai,"found", 1), 200);
+        return response() -> json(Response::transform($sungaiRT,"found", 1), 200);
 
     }
 
