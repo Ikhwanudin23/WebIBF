@@ -35,7 +35,16 @@ class SungaiRTController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $sungai = SungaiRT::create([
+            'ketinggian' => $request->ketinggian,
+            'status' => $request->status,
+        ]);
+
+        return response()->json([
+            'message' => 'berhasil',
+            'status' => 1,
+            'data' => $sungai
+        ], 201);
     }
 
     /**
@@ -44,9 +53,15 @@ class SungaiRTController extends Controller
      * @param  \App\SungaiRT  $sungaiRT
      * @return \Illuminate\Http\Response
      */
-    public function show(SungaiRT $sungaiRT)
+    public function show(SungaiRT $sungaiRT, $id)
     {
-        //
+        $sungai = SungaiRT::find($id);
+        if (is_null($sungai)) {
+            return response()->json(array('message'=>'
+                record not found', 'status'=>0),201);
+        }
+        return response() -> json(Response::transform($sungai,"found", 1), 200);
+
     }
 
     /**
