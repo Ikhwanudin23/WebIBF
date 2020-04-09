@@ -22,3 +22,10 @@ Route::post('sungai/create','SungaiRTController@store');
 Route::get('sungai/{id}','SungaiRTController@show');
 Route::put('sungai/{id}','SungaiRTController@update');
 
+Route::get('debittumpah/{id}','DebitTumpahRTController@show');
+Route::put('debittumpah/{id}','DebitTumpahRTController@update');
+Route::post('debittumpah/create','DebitTumpahRTController@store');
+
+Route::post('report/create','ReportController@store');
+
+

@@ -51,7 +51,16 @@ class ReportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $report = Report::create([
+            'sungai' => $request->sungai,
+            'debittumpah' => $request->debittumpah,
+        ]);
+
+        return response()->json([
+            'message' => 'berhasil',
+            'status' => 1,
+            'data' => $report
+        ], 201);
     }
 
     /**
