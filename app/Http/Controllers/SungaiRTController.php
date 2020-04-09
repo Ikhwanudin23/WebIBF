@@ -15,6 +15,8 @@ class SungaiRTController extends Controller
      */
     public function index()
     {
+        $sungai = SungaiRT::all()->get();
+        return view('pages.ketinggiansungai', compact('sungai'));
         return response() -> json(Response::transform(SungaiRT::get(), "ok" , 1), 200);
     }
 
