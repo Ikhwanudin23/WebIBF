@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('sungai','SungaiRTController@index');
 Route::post('sungai/create','SungaiRTController@store');
 Route::get('sungai/{id}','SungaiRTController@show');
+Route::put('sungai/{id}','SungaiRTController@update');
+

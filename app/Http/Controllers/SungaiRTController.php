@@ -96,6 +96,13 @@ class SungaiRTController extends Controller
             'error' => false,
             'sungai'  => $sungai,
         ], 200);
+//        $sungaiRT = SungaiRT::find($id);
+//        if(is_null($sungaiRT)){
+//            return response() -> json(array('message'=>'cannot delete because record not found', 'status'=>0),200);
+//        }
+//        Bola::update($id);
+//        return response() -> json(array('message'=>'succesfully deleted', 'status' => 1), 200);
+
     }
 
     /**
