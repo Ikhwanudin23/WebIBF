@@ -20,7 +20,7 @@
                             <div class="float-left mini-stat-img mr-4">
                                 <img src="assets/images/services-icon/01.png" alt="">
                             </div>
-                            <h5 class="font-16 text-uppercase mt-0 text-white-50">Debit Tumpah</h5>
+                            <h5 class="font-16 text-uppercase mt-0 text-white-50">Debit</h5>
                             @foreach($debittumpah as $dbt)
                             <h4 class="font-500">{{$dbt->ketinggian}} </h4>
                             @endforeach

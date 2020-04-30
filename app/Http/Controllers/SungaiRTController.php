@@ -89,15 +89,24 @@ class SungaiRTController extends Controller
     {
         $sungai = SungaiRT::find($id);
 
-        $sungai->ketinggian = $request->input('ketinggian');
-        $sungai->status = $request->input('status');
-
-        $sungai->save();
+//        $sungai->ketinggian = $request->input('ketinggian');
+//        $sungai->status = $request->input('status');
+//
+//        $sungai->save();
+//
+//        return response()->json([
+//            'error' => false,
+//            'sungai'  => $sungai,
+//        ], 200);
+        $sungai->update([
+            'ketinggian'     => $request->ketinggian,
+            'status'   => $request->status,
+        ]);
 
         return response()->json([
-            'error' => false,
-            'sungai'  => $sungai,
-        ], 200);
+            'message' => 'Sungai Updated',
+            'status' => '1'
+        ], 201);
 //        $sungaiRT = SungaiRT::find($id);
 //        if(is_null($sungaiRT)){
 //            return response() -> json(array('message'=>'cannot delete because record not found', 'status'=>0),200);
