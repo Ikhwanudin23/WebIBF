@@ -59,11 +59,12 @@ class SungaiRTController extends Controller
     public function show(SungaiRT $sungaiRT, $id)
     {
         $sungaiRT = SungaiRT::find($id);
-        if (is_null($sungaiRT)) {
-            return response()->json(array('message'=>'
-                record not found', 'status'=>0),201);
-        }
-        return response() -> json(Response::transform($sungaiRT,"found", 1), 200);
+
+        return [
+            'message' => 'success',
+            'status'  => '1',
+            'data' => $sungaiRT
+        ];
 
     }
 
@@ -89,15 +90,6 @@ class SungaiRTController extends Controller
     {
         $sungai = SungaiRT::find($id);
 
-//        $sungai->ketinggian = $request->input('ketinggian');
-//        $sungai->status = $request->input('status');
-//
-//        $sungai->save();
-//
-//        return response()->json([
-//            'error' => false,
-//            'sungai'  => $sungai,
-//        ], 200);
         $sungai->update([
             'ketinggian'     => $request->ketinggian,
             'status'   => $request->status,
@@ -105,15 +97,9 @@ class SungaiRTController extends Controller
 
         return response()->json([
             'message' => 'Sungai Updated',
-            'sungai'  => $sungai,
-            'status' => '1'
+            'status' => '1',
+            'data'  => $sungai
         ], 201);
-//        $sungaiRT = SungaiRT::find($id);
-//        if(is_null($sungaiRT)){
-//            return response() -> json(array('message'=>'cannot delete because record not found', 'status'=>0),200);
-//        }
-//        Bola::update($id);
-//        return response() -> json(array('message'=>'succesfully deleted', 'status' => 1), 200);
 
     }
 

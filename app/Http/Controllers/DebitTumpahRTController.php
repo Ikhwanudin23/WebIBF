@@ -80,15 +80,16 @@ class DebitTumpahRTController extends Controller
     {
         $debitt = DebitTumpahRT::find($id);
 
-        $debitt->ketinggian = $request->input('ketinggian');
-        $debitt->status = $request->input('status');
-
-        $debitt->save();
+        $debitt->update([
+            'ketinggian'     => $request->ketinggian,
+            'status'   => $request->status,
+        ]);
 
         return response()->json([
-            'error' => false,
+            'message' => 'Sungai Updated',
             'debitt'  => $debitt,
-        ], 200);
+            'status' => '1'
+        ], 201);
     }
 
     /**
