@@ -105,6 +105,7 @@ class SungaiRTController extends Controller
 
         return response()->json([
             'message' => 'Sungai Updated',
+            'sungai'  => $sungai,
             'status' => '1'
         ], 201);
 //        $sungaiRT = SungaiRT::find($id);
