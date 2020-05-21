@@ -62,7 +62,6 @@ class SungaiRTController extends Controller
 
         return [
             'message' => 'success',
-            'status'  => '1',
             'data' => $sungaiRT
         ];
 
