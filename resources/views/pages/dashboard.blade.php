@@ -44,7 +44,7 @@
                             </div>
                             <h5 class="font-16 text-uppercase mt-0 text-white-50">Sungai</h5>
                             @foreach($sungai as $sg)
-                            <h4 id="ketinggian" class="font-500">{{$sg->ketinggian}}</h4>
+                            <h4 id="sungai" class="font-500">{{$sg->ketinggian}}</h4>
                                 <h5 id="status">Aman</h5>
                             @endforeach
 
@@ -85,7 +85,7 @@
 
         // Enable pusher logging - don't include this in production
         // Pusher.logToConsole = true;
-        const ketinggian = document.querySelector('#ketinggian');
+        const sungai = document.querySelector('#sungai');
        const debit = document.querySelector('#debit');
 
         const status = document.querySelector('#status');
@@ -98,8 +98,8 @@
         var channel = pusher.subscribe('flood');
         channel.bind('App\\Events\\FloodEvent', function(data) {
             console.log(data);
-            if(data.message.ketinggian !== undefined){
-                ketinggian.innerHTML = data.message.ketinggian;
+            if(data.message.sungai !== undefined){
+                sungai.innerHTML = data.message.sungai;
                 //ketinggian.innerHTML = data.message.ketinggiand;
                 if(data.message.status == 1){
                     status.innerHTML = 'Aman';

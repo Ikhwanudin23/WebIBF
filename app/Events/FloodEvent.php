@@ -12,6 +12,7 @@ class FloodEvent implements ShouldBroadcast
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $message;
+
     /**
      * Create a new event instance.
      *
@@ -20,6 +21,7 @@ class FloodEvent implements ShouldBroadcast
     public function __construct($data)
     {
         $this->message = $data;
+        $this->$data->toJson();
     }
 
     /**

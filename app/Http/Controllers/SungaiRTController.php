@@ -98,7 +98,7 @@ class SungaiRTController extends Controller
         ]);
 
         $notifikasi = new Notifikasi;
-        $data = (object) ['ketinggian' => $sungai->ketinggian, 'status' => $sungai->status];
+        $data = (object) ['sungai' => $sungai->ketinggian, 'status' => $sungai->status];
         $notifikasi->sendNotify($data);
 //
         return response()->json([
