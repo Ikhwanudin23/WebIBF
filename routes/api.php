@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 Route::get('sungai','SungaiRTController@index');
 Route::post('sungai/create','SungaiRTController@store');
 Route::get('sungai/{id}','SungaiRTController@show');

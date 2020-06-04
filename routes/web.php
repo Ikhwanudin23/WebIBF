@@ -24,18 +24,12 @@ Route::group(['prefix' => 'admin'], function (){
     Route::get('/sungai','ReportController@sungai')->name('sungai');
     Route::get('/debittumpah','ReportController@debittumpah')->name('debittumpah');
     Route::get('/report','ReportController@index')->name('report');
-
-
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('test', function() {
+//   event(new App\Events\FloodEvent('kontol'));
+//   return "event has been sendt";
+//});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

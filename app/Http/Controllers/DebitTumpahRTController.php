@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\DebitTumpahRT;
+use App\Response;
 use Illuminate\Http\Request;
+use App\Notifikasi;
 
 class DebitTumpahRTController extends Controller
 {
@@ -85,8 +87,12 @@ class DebitTumpahRTController extends Controller
             'status'   => $request->status,
         ]);
 
+        $notifikasi = new Notifikasi;
+        $data = (object) ['debit' => $debitt->ketinggian, 'status' => $debitt->status];
+        $notifikasi->sendNotify($data);
+
         return response()->json([
-            'message' => 'Sungai Updated',
+            'message' => 'Debit Updated',
             'debitt'  => $debitt,
             'status' => '1'
         ], 201);

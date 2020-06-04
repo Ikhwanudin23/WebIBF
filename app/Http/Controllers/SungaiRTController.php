@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\SungaiRT;
 use App\Response;
 use Illuminate\Http\Request;
+use App\Notifikasi;
 
 class SungaiRTController extends Controller
 {
@@ -15,8 +16,8 @@ class SungaiRTController extends Controller
      */
     public function index()
     {
-        $sungai = SungaiRT::all()->get();
-        return view('pages.ketinggiansungai', compact('sungai'));
+        $sungai = SungaiRT::all();
+//        return view('pages.ketinggiansungai', compact('sungai'));
         return response() -> json(Response::transform(SungaiRT::get(), "ok" , 1), 200);
     }
 
@@ -42,6 +43,7 @@ class SungaiRTController extends Controller
             'ketinggian' => $request->ketinggian,
             'status' => $request->status,
         ]);
+
 
         return response()->json([
             'message' => 'berhasil',
@@ -89,14 +91,19 @@ class SungaiRTController extends Controller
     {
         $sungai = SungaiRT::find($id);
 
+
         $sungai->update([
             'ketinggian'     => $request->ketinggian,
             'status'   => $request->status,
         ]);
 
+        $notifikasi = new Notifikasi;
+        $data = (object) ['ketinggian' => $sungai->ketinggian, 'status' => $sungai->status];
+        $notifikasi->sendNotify($data);
+//
         return response()->json([
             'message' => 'Sungai Updated',
-            'status' => '1',
+            'status' => true,
             'data'  => $sungai
         ], 201);
 

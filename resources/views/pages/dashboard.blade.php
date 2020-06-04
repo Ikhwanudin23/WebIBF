@@ -22,7 +22,9 @@
                             </div>
                             <h5 class="font-16 text-uppercase mt-0 text-white-50">Debit</h5>
                             @foreach($debittumpah as $dbt)
-                            <h4 class="font-500">{{$dbt->ketinggian}} </h4>
+                            <h4 id="debit" class="font-500">{{$dbt->ketinggian}} </h4>
+                                <h5 id="status">Aman</h5>
+
                             @endforeach
 
                         </div>
@@ -42,8 +44,8 @@
                             </div>
                             <h5 class="font-16 text-uppercase mt-0 text-white-50">Sungai</h5>
                             @foreach($sungai as $sg)
-                            <h4 class="font-500">{{$sg->ketinggian}}</h4>
-                                <h5>Aman</h5>
+                            <h4 id="ketinggian" class="font-500">{{$sg->ketinggian}}</h4>
+                                <h5 id="status">Aman</h5>
                             @endforeach
 
                         </div>
@@ -77,4 +79,49 @@
 
         <!-- end row --></div>
     <!-- container-fluid -->
+
+    <script src="https://js.pusher.com/6.0/pusher.min.js"></script>
+    <script>
+
+        // Enable pusher logging - don't include this in production
+        // Pusher.logToConsole = true;
+        const ketinggian = document.querySelector('#ketinggian');
+       const debit = document.querySelector('#debit');
+
+        const status = document.querySelector('#status');
+
+        var pusher = new Pusher('362f1f8218cb607ebc5d', {
+            cluster: 'ap1',
+            // encrypted: true
+        });
+
+        var channel = pusher.subscribe('flood');
+        channel.bind('App\\Events\\FloodEvent', function(data) {
+            console.log(data);
+            if(data.message.ketinggian !== undefined){
+                ketinggian.innerHTML = data.message.ketinggian;
+                //ketinggian.innerHTML = data.message.ketinggiand;
+                if(data.message.status == 1){
+                    status.innerHTML = 'Aman';
+                }else if(data.message.status == 2){
+                    status.innerHTML = 'Tidak aman';
+                }else {
+                    status.innerHTML = 'Bahaya';
+                }
+            }
+
+            if(data.message.debit !== undefined){
+                debit.innerHTML = data.message.debit;
+                //ketinggian.innerHTML = data.message.ketinggiand;
+                if(data.message.status == 1){
+                    status.innerHTML = 'Aman';
+                }else if(data.message.status == 2){
+                    status.innerHTML = 'Tidak aman';
+                }else {
+                    status.innerHTML = 'Bahaya';
+                }
+            }
+            // alert(JSON.stringify(data));
+        });
+    </script>
 @endsection
