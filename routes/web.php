@@ -24,6 +24,7 @@ Route::group(['prefix' => 'admin'], function (){
     Route::get('/sungai','ReportController@sungai')->name('sungai');
     Route::get('/debittumpah','ReportController@debittumpah')->name('debittumpah');
     Route::get('/report','ReportController@index')->name('report');
+    Route::post('report/search','ReportController@search')->name('search');
 });
 
 //Route::get('test', function() {
