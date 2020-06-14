@@ -51,7 +51,7 @@
                             @foreach($report as $rp)
                             <tr>
                                 <td>{{$no}}</td>
-                                <td>{{$rp->created_at->format('d-m-Y')}}</td>
+                                <td>{{$rp->created_at}}</td>
                                 <td>{{$rp->sungai}}</td>
                                 <td>{{$rp->debittumpah}}</td>
 
