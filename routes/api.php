@@ -24,5 +24,7 @@ Route::put('debittumpah/{id}','DebitTumpahRTController@update');
 Route::post('debittumpah/create','DebitTumpahRTController@store');
 
 Route::post('report/create','ReportController@store');
+Route::get('report/monthnow','ReportController@monthnow');
+Route::get('report/daynow','ReportController@daynow');
 
 

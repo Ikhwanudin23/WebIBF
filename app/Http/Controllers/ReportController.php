@@ -87,22 +87,26 @@ class ReportController extends Controller
     }
 
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function monthnow()
     {
-        //
+        $report = Report::whereMonth('created_at', Carbon::now()->format('m'))->get();
+        return response()->json([
+            'message' => 'berhasil',
+            'status' => 1,
+            'data' => $report
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
+    public function daynow(){
+        $report = Report::whereDay('created_at', Carbon::now()->format('d'))->get();
+        return response()->json([
+            'message' => 'berhasil',
+            'status' => 1,
+            'data' => $report
+        ]);
+    }
+
     public function store(Request $request)
     {
         $report = Report::create([
