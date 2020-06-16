@@ -36,6 +36,8 @@
                                 <button type="submit" class="btn btn-success">cari</button>
                             </div>
                         </form>
+                        <a href="{{route('printreport')}}" class="btn btn-primary" target="_blank">CETAK PDF</a>
+
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
