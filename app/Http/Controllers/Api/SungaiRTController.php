@@ -10,8 +10,7 @@ use App\Notifikasi;
 
 class SungaiRTController extends Controller
 {
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $sungai = SungaiRT::create([
             'ketinggian' => $request->ketinggian,
             'status' => $request->status,
@@ -25,8 +24,7 @@ class SungaiRTController extends Controller
         ], 201);
     }
 
-    public function update(Request $request, SungaiRT $sungaiRT,$id)
-    {
+    public function update(Request $request, SungaiRT $sungaiRT,$id){
         $sungai = SungaiRT::find($id);
 
 

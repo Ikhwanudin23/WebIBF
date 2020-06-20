@@ -10,8 +10,7 @@ use App\Notifikasi;
 
 class DebitTumpahRTController extends Controller
 {
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $debitt = DebitTumpahRT::create([
             'ketinggian' => $request->ketinggian,
             'status' => $request->status,
@@ -24,8 +23,7 @@ class DebitTumpahRTController extends Controller
         ], 201);
     }
 
-    public function update(Request $request, DebitTumpahRT $debitTumpahRT, $id)
-    {
+    public function update(Request $request, DebitTumpahRT $debitTumpahRT, $id){
         $debitt = DebitTumpahRT::find($id);
 
         $debitt->update([
