@@ -12,31 +12,28 @@
     }
 </style>
 <center>
-    <h5>Membuat Laporan PDF Dengan DOMPDF Laravel</h4>
-        <h6><a target="_blank" href="#">www.malasngoding.com</a></h5>
+    <h5>Laporan Debit Tumpah dan Sungai</h5>
 </center>
+
+<h1>Bulan : {{$nama_bulan}}</h1>
 
 <table class='table table-bordered'>
     <thead>
     <tr>
-        <th>No</th>
         <th>Tanggal</th>
         <th>Sungai</th>
         <th>Debit Tumpah</th>
     </tr>
     </thead>
     <tbody>
-    <?php $no = 1; ?>
-    @foreach($report as $rp)
+    @for($i = 1; $i <= $tanggal; $i++)
         <tr>
-            <td>{{$no}}</td>
-            <td>{{$rp->created_at}}</td>
-            <td>{{$rp->sungai}}</td>
-            <td>{{$rp->debittumpah}}</td>
-
+            <td>{{$i}}</td>
+            {{--<td>{{isset($reports[$i]) ? $reports[$i]["created_at"]->format('d-m-Y') : '-'}}</td>--}}
+            <td>{{isset($reports[$i]) ? $reports[$i]["sungai"] : '-'}}</td>
+            <td>{{isset($reports[$i]) ? $reports[$i]["debit_tumpah"] : '-'}}</td>
         </tr>
-        <?php $no++ ?>
-    @endforeach
+    @endfor
     </tbody>
 </table>
 

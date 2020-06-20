@@ -15,51 +15,54 @@
                     <div class="card-body">
                         <form action="{{route('search')}}" method="post" class="row">
                             @csrf
-                           <div class="form-group col-md-4">
-                               <label> Bulan </label>
-                               <select class="form-control" name="bulan">
-                                   <option value="1"{{$bulan == '1' ? 'selected' : ''}}>Januari</option>
-                                   <option value="2"{{$bulan == '2' ? 'selected' : ''}}>Februari</option>
-                                   <option value="3"{{$bulan == '3' ? 'selected' : ''}}>Maret</option>
-                                   <option value="4"{{$bulan == '4' ? 'selected' : ''}}>April</option>
-                                   <option value="5"{{$bulan == '5' ? 'selected' : ''}}>Mei</option>
-                                   <option value="6"{{$bulan == '6' ? 'selected' : ''}}>Juni</option>
-                                   <option value="7"{{$bulan == '7' ? 'selected' : ''}}>Juli</option>
-                                   <option value="8"{{$bulan == '8' ? 'selected' : ''}}>Agustus</option>
-                                   <option value="9"{{$bulan == '9' ? 'selected' : ''}}>September</option>
-                                   <option value="10"{{$bulan == '10' ? 'selected' : ''}}>Oktober</option>
-                                   <option value="11"{{$bulan == '11' ? 'selected' : ''}}>November</option>
-                                   <option value="12"{{$bulan == '12' ? 'selected' : ''}}>Desember</option>
-                               </select>
-                           </div>
-                            <div class="col-md-4 mt-4">
-                                <button type="submit" class="btn btn-success">cari</button>
+                            <div class="form-group col-md-4">
+                                <label> Bulan </label>
+                                <select class="form-control" name="bulan">
+                                    <option value="1"{{$bulan == '1' ? 'selected' : ''}}>Januari</option>
+                                    <option value="2"{{$bulan == '2' ? 'selected' : ''}}>Februari</option>
+                                    <option value="3"{{$bulan == '3' ? 'selected' : ''}}>Maret</option>
+                                    <option value="4"{{$bulan == '4' ? 'selected' : ''}}>April</option>
+                                    <option value="5"{{$bulan == '5' ? 'selected' : ''}}>Mei</option>
+                                    <option value="6"{{$bulan == '6' ? 'selected' : ''}}>Juni</option>
+                                    <option value="7"{{$bulan == '7' ? 'selected' : ''}}>Juli</option>
+                                    <option value="8"{{$bulan == '8' ? 'selected' : ''}}>Agustus</option>
+                                    <option value="9"{{$bulan == '9' ? 'selected' : ''}}>September</option>
+                                    <option value="10"{{$bulan == '10' ? 'selected' : ''}}>Oktober</option>
+                                    <option value="11"{{$bulan == '11' ? 'selected' : ''}}>November</option>
+                                    <option value="12"{{$bulan == '12' ? 'selected' : ''}}>Desember</option>
+                                </select>
                             </div>
-                        </form>
-                        <a href="{{route('printreport')}}" class="btn btn-primary" target="_blank">CETAK PDF</a>
+                            <div class="col-md-4 mt-4">
+                                <button type="submit" class="btn btn-success">Cari</button>
+                            </div>
 
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+
+
+                        </form>
+                        <br>
+
+
+
+                        <table class="table table-bordered dt-responsive nowrap"
                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                             <tr>
-                                <th>No</th>
                                 <th>Tanggal</th>
+                                {{--<th>Tanggal</th>--}}
                                 <th>Sungai</th>
                                 <th>Debit Tumpah</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <?php $no = 1; ?>
-                            @foreach($report as $rp)
-                            <tr>
-                                <td>{{$no}}</td>
-                                <td>{{$rp->created_at}}</td>
-                                <td>{{$rp->sungai}}</td>
-                                <td>{{$rp->debittumpah}}</td>
 
-                            </tr>
-                            <?php $no++ ?>
-                            @endforeach
+                            @for($i = 1; $i <= $tanggal; $i++)
+                                <tr>
+                                    <td>{{$i}}</td>
+                                    {{--<td>{{isset($reports[$i]) ? $reports[$i]["created_at"]->format('d-m-Y') : '-'}}</td>--}}
+                                    <td>{{isset($reports[$i]) ? $reports[$i]["sungai"] : '-'}}</td>
+                                    <td>{{isset($reports[$i]) ? $reports[$i]["debit_tumpah"] : '-'}}</td>
+                                </tr>
+                            @endfor
                             </tbody>
                         </table>
                     </div>

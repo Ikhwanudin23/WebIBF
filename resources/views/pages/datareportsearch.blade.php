@@ -33,9 +33,18 @@
                                 </select>
                             </div>
                             <div class="col-md-4 mt-4">
-                                <button type="submit" class="btn btn-success">cari</button>
+                                <button type="submit" class="btn btn-success">Cari</button>
                             </div>
+
+
+                                <div class="col-md-12">
+                                    <a href="{{route('printreport', $bulan)}}"> Print</a>
+
+                                </div>
+
                         </form>
+
+                        <br>
 
 
                         <table class="table table-bordered dt-responsive nowrap"

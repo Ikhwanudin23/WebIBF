@@ -14,19 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('sungai','SungaiRTController@index');
-Route::post('sungai/create','SungaiRTController@store');
-Route::get('sungai/{id}','SungaiRTController@show');
-Route::put('sungai/{id}','SungaiRTController@update');
+//Route::get('sungai','Api\SungaiRTController@index');
+Route::post('sungai/create','Api\SungaiRTController@store');
+//Route::get('sungai/{id}','Api\SungaiRTController@show');
+Route::put('sungai/{id}','Api\SungaiRTController@update');
 
 Route::post('register','RegisterController@create');
 
-Route::get('debittumpah/{id}','DebitTumpahRTController@show');
-Route::put('debittumpah/{id}','DebitTumpahRTController@update');
-Route::post('debittumpah/create','DebitTumpahRTController@store');
+//Route::get('debittumpah/{id}','Api\DebitTumpahRTController@show');
+Route::put('debittumpah/{id}','Api\DebitTumpahRTController@update');
+Route::post('debittumpah/create','Api\DebitTumpahRTController@store');
 
-Route::post('report/create','ReportController@store');
-Route::get('report/monthnow','ReportController@monthnow');
-Route::get('report/daynow','ReportController@daynow');
+Route::post('report/create','Api\ReportController@store');
+Route::get('report/monthnow','Api\ReportController@monthnow');
+Route::get('report/daynow','Api\ReportController@daynow');
 
 
