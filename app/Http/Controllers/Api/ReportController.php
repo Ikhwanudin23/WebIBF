@@ -26,14 +26,16 @@ class ReportController extends Controller
 
     }
     public function monthnow(){
-        $data = DB::table('reports')
-            ->select(DB::raw('avg(debittumpah) as debittumpah, avg(sungai) as sungai, DATE(created_at) day'))
-            ->groupBy('day')->whereMonth('created_at','=', date('m'))
-            ->get();
+        $report = Report::select
+        (DB::raw('avg(debittumpah) as debittumpah, avg(sungai) as sungai, DATE(created_at) day'))->groupBy('day')->whereMonth('created_at','=', date('m'))->get();
+//        $data = DB::table('reports')
+//            ->select(DB::raw('avg(debittumpah) as debittumpah, avg(sungai) as sungai, DATE(created_at) day'))
+//            ->groupBy('day')->whereMonth('created_at','=', date('m'))
+//            ->get();
         return response()->json([
             'message' => 'berhasil',
             'status' => 1,
-            'data' => $data
+            'data' => $report
         ]);
     }
 
