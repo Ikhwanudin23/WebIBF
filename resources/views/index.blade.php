@@ -18,7 +18,7 @@
         @yield('content')
         <!-- content -->
         </div>
-        <footer class="footer">© 2020 Pemkab Brebes <span class="d-none d-sm-inline-block">- WebInformationBrebesFlood <i class="mdi mdi-heart text-danger"></i> by Syafiq</span>.</footer>
+        <footer class="footer">© 2020 Pemkab Brebes <span class="d-none d-sm-inline-block">- WebInformationBrebesFlood <i class="mdi mdi-heart text-danger"></i></span>.</footer>
     </div>
     <!-- ============================================================== -->
     <!-- End Right content here -->
