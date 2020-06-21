@@ -32,7 +32,7 @@ class ReportController extends Controller
 
 
         $report = Report::select
-        (DB::raw('avg(debittumpah) as debittumpah, avg(sungai) as sungai, DATE(created_at) day'))
+        (DB::raw('avg(debittumpah) as debittumpah, avg(sungai) as sungai, DATE(created_at) as day'))
             ->groupBy('day')->whereMonth('created_at','=', date('m'))->get();
 
 
