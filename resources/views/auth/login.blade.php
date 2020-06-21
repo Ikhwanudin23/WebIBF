@@ -54,7 +54,7 @@
                 Don't have an account ? <a href="{{ route('register') }}" class="font-500 text-primary">Signup now</a>
             </p>
             <p>
-                © 2020 Web Information Brebes <span class="d-none d-sm-inline-block">- Created by Syafiq Marzuki</span>
+                © 2020 Web Information Brebes <span class="d-none d-sm-inline-block"></span>
             </p>
         </div>
     </div>
