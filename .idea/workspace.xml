@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b153d16-dbc7-4928-8d4a-8fe3d16e81f3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ReportController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ReportController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
       <file leaf-file-name="ReportController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReportController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="29" column="88" lean-forward="false" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="88" />
+            <state relative-caret-position="154">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="e#44#80#0#PHP" expanded="true" />
               </folding>
@@ -414,12 +415,12 @@
       <workItem from="1592698161310" duration="68000" />
       <workItem from="1592704234082" duration="1218000" />
       <workItem from="1592722546694" duration="2797000" />
-      <workItem from="1592728721046" duration="1838000" />
+      <workItem from="1592728721046" duration="2182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116756000" />
+    <option name="totallyTimeSpent" value="117100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -912,8 +913,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReportController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="29" column="88" lean-forward="false" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="88" />
+        <state relative-caret-position="154">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="e#44#80#0#PHP" expanded="true" />
           </folding>
