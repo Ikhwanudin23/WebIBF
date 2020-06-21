@@ -16,7 +16,8 @@ class CreateReportsTable extends Migration
         Schema::create('reports', function (Blueprint $table) {
             $table->float('sungai');
             $table->float('debittumpah');
-            $table->timestamps();
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('update_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 
