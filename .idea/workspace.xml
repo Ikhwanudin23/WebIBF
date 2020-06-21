@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b153d16-dbc7-4928-8d4a-8fe3d16e81f3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ReportController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ReportController.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_07_034014_create_reports_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_04_07_034014_create_reports_table.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -166,8 +166,8 @@
       <file leaf-file-name="2020_04_07_034014_create_reports_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_07_034014_create_reports_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="289">
+              <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -548,12 +548,12 @@
       <workItem from="1592644054700" duration="7497000" />
       <workItem from="1592698161310" duration="68000" />
       <workItem from="1592704234082" duration="1218000" />
-      <workItem from="1592722546694" duration="2084000" />
+      <workItem from="1592722546694" duration="2362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114205000" />
+    <option name="totallyTimeSpent" value="114483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1092,8 +1092,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_07_034014_create_reports_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="289">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding />
         </state>
       </provider>

@@ -17,7 +17,7 @@ class CreateReportsTable extends Migration
             $table->float('sungai');
             $table->float('debittumpah');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('update_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            //$table->timestamp('update_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 
