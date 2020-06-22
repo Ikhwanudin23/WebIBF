@@ -36,15 +36,15 @@
       <file leaf-file-name="printreport.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/printreport.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="395">
+              <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1592799742515" expanded="true" signature="1069:1080" ph="..." />
-                <marker date="1592799742515" expanded="true" signature="1425:1453" ph="..." />
-                <marker date="1592799742515" expanded="true" signature="1486:1488" ph="..." />
-                <marker date="1592799742515" expanded="true" signature="1619:1669" ph="..." />
-                <marker date="1592799742515" expanded="true" signature="1695:1751" ph="..." />
+                <marker date="1592800338744" expanded="true" signature="1075:1086" ph="..." />
+                <marker date="1592800338744" expanded="true" signature="1431:1459" ph="..." />
+                <marker date="1592800338744" expanded="true" signature="1492:1494" ph="..." />
+                <marker date="1592800338744" expanded="true" signature="1625:1675" ph="..." />
+                <marker date="1592800338744" expanded="true" signature="1701:1757" ph="..." />
               </folding>
             </state>
           </provider>
@@ -431,13 +431,6 @@
             <path>
               <item name="wibf" type="b2602c69:ProjectViewProjectNode" />
               <item name="wibf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="wibf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wibf" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -538,12 +531,12 @@
       <workItem from="1592704234082" duration="1218000" />
       <workItem from="1592722546694" duration="2797000" />
       <workItem from="1592728721046" duration="6329000" />
-      <workItem from="1592796074665" duration="2392000" />
+      <workItem from="1592796074665" duration="2977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123639000" />
+    <option name="totallyTimeSpent" value="124224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1133,15 +1126,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/printreport.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="395">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1592799742515" expanded="true" signature="1069:1080" ph="..." />
-            <marker date="1592799742515" expanded="true" signature="1425:1453" ph="..." />
-            <marker date="1592799742515" expanded="true" signature="1486:1488" ph="..." />
-            <marker date="1592799742515" expanded="true" signature="1619:1669" ph="..." />
-            <marker date="1592799742515" expanded="true" signature="1695:1751" ph="..." />
+            <marker date="1592800338744" expanded="true" signature="1075:1086" ph="..." />
+            <marker date="1592800338744" expanded="true" signature="1431:1459" ph="..." />
+            <marker date="1592800338744" expanded="true" signature="1492:1494" ph="..." />
+            <marker date="1592800338744" expanded="true" signature="1625:1675" ph="..." />
+            <marker date="1592800338744" expanded="true" signature="1701:1757" ph="..." />
           </folding>
         </state>
       </provider>
