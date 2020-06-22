@@ -6,7 +6,7 @@
 </head>
 <table align="center">
     <tr>
-        <td><img src="#" width="70" height="70"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/id/a/a8/Lambang_Kabupaten_Brebes.png" width="70" height="70"></td>
         <td><center>
                 <font size="4">DINAS PEKERJAAN UMUM SUMBER DAYA AIR DAN PENATAAN RUANG</font><BR>
                 <font size="5"><b>BALAI PENGELOLAAN SUMBER DAYA AIR PEMALI COMAL</b></font><BR>
@@ -26,7 +26,8 @@
 </center>
 
 <br>
-<table id="example1" class="table table-bordered table-striped">
+<table id="example1"  class="table table-bordered dt-responsive nowrap"
+       style="border-collapse: collapse; border-spacing: 0; width: 100%;">
     <thead>
     <tr>
         <th>Tanggal</th>
