@@ -4,7 +4,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <h4 class="page-title">Data Ketinggian Sungai</h4>
+                    <h4 class="page-title">Data Ketinggian Debit Tumpah dan Sungai</h4>
                 </div>
             </div>
         </div>

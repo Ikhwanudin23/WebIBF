@@ -38,7 +38,7 @@
 
 
                                 <div class="col-md-12">
-                                    <a href="{{route('printreport', $bulan)}}"> Print</a>
+                                    <a href="{{route('printreport', $bulan)}}" class="btn btn-warning"> Print</a>
 
                                 </div>
 
