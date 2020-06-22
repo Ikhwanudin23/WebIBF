@@ -59,21 +59,21 @@
         </div>
         <!-- end row -->
         <div class="row">
-            <div class="col-xl-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="mt-0 header-title mb-10">Monthly Earning</h4>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div>
-                                    <div id="chart-with-area" class="ct-chart earning ct-golden-section"></div>
-                                </div>
-                            </div>
+            {{--<div class="col-xl-12">--}}
+                {{--<div class="card">--}}
+                    {{--<div class="card-body">--}}
+                        {{--<h4 class="mt-0 header-title mb-10">Monthly Earning</h4>--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-lg-12">--}}
+                                {{--<div>--}}
+                                    {{--<div id="chart-with-area" class="ct-chart earning ct-golden-section"></div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                        </div>
-                        <!-- end row --></div>
-                </div>
-                <!-- end card --></div>
+                        {{--</div>--}}
+                        {{--<!-- end row --></div>--}}
+                {{--</div>--}}
+                {{--<!-- end card --></div>--}}
         </div>
         <!-- end row -->
 
