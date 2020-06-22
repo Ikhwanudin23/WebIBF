@@ -6,7 +6,7 @@
 </head>
 <table align="center">
     <tr>
-        <td><img src="{{asset('assets/images/pemkabbrebes.png')}}" width="70" height="70"></td>
+        <td><img src="#" width="70" height="70"></td>
         <td><center>
                 <font size="4">DINAS PEKERJAAN UMUM SUMBER DAYA AIR DAN PENATAAN RUANG</font><BR>
                 <font size="5"><b>BALAI PENGELOLAAN SUMBER DAYA AIR PEMALI COMAL</b></font><BR>
