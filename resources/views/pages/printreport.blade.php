@@ -31,8 +31,8 @@
     <thead>
     <tr>
         <th>Tanggal</th>
-        <th>Rata-Rata Ketinggian Sungai</th>
-        <th>Rata-Rata Ketinggian Debit Tumpah</th>
+        <th>Ketinggian Sungai</th>
+        <th>Ketinggian Debit Tumpah</th>
     </tr>
     </thead>
 
