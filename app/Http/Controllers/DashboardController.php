@@ -1,8 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+//require __DIR__.'/vendor/autoload.php';
+
 
 use Illuminate\Http\Request;
+use Kreait\Firebase\Factory;
+use Kreait\Firebase\ServiceAccount;
+use Kreait\Laravel\Firebase;
+//use Kreait\Firebase\ServiceAccount;
+
+
 use App\DebitTumpahRT;
 use App\SungaiRT;
 
@@ -13,16 +21,50 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+//    public function __construct()
+//    {
+//        $this->middleware('auth');
+//    }
 
     public function index()
     {
-        $debittumpah = DebitTumpahRT::where('id','1')->get();
-        $sungai = SungaiRT::where('id','1')->get();
-        return view('pages.dashboard',compact('debittumpah', 'sungai'));
+//        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/firebase.json');
+//        $firebase = (new Factory)
+//            ->withServiceAccount($serviceAccount)
+//            ->withDatabaseUri('https://ibrebesf.firebaseio.com/')
+//            ->create();
+//        $database = $firebase->getDatabase();
+//        $GetSungai = $database
+//            ->getReference('Raspi3/Sungai')
+//            ->push([
+//                'title' => 'Post title',
+//                'body' => 'This should probably be longer.'
+//            ]);
+        $serviceAccount = ServiceAccount::fromValue(__DIR__.'/firebase.json');
+        //$serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/firebase.json');
+
+       // $firebase = (new Factory)->withServiceAccount($serviceAccount)->withDatabaseUri('https://ibrebesf.firebaseio.com/')->create();
+
+
+
+//        $firebase = (new Factory)
+//            ->withServiceAccount($serviceAccount)
+//            ->withDatabaseUri('https://ibrebesf.firebaseio.com/')
+//            ->create();
+        $factory = (new Factory())
+            ->withDatabaseUri('https://ibrebesf.firebaseio.com/');
+
+        $database   =   $factory->getDatabase();
+
+        dd($database);
+//        $getDebit    =   $database->getReference('Raspi3/Debit')->getvalue();
+//        $getSungai    =   $database->getReference('Raspi3/Sungai')->getvalue();
+//        return response()->json($getDebit);
+
+
+//        $debittumpah = DebitTumpahRT::where('id','1')->get();
+//        $sungai = SungaiRT::where('id','1')->get();
+//        return view('pages.dashboard',compact('debittumpah', 'sungai'));
     }
 
     /**

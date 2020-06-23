@@ -31,7 +31,7 @@
                                     <td>{{$no}}</td>
                                     <td>{{$sg->created_at->format('d-m-Y')}}</td>
                                     <td>{{$sg->created_at->format('h:i')}}</td>
-                                    <td>{{$sg->sungai}}</td>
+                                    <td>{{$sg->sungai}} cm</td>
                                 </tr>
                                 <?php $no++ ?>
                             @endforeach

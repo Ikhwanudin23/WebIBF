@@ -41,8 +41,8 @@
         <tr>
             <td>{{$i}}</td>
             {{--<td>{{isset($reports[$i]) ? $reports[$i]["created_at"]->format('d-m-Y') : '-'}}</td>--}}
-            <td>{{isset($reports[$i]) ? $reports[$i]["sungai"] : '-'}}</td>
-            <td>{{isset($reports[$i]) ? $reports[$i]["debit_tumpah"] : '-'}}</td>
+            <td>{{isset($reports[$i]) ? $reports[$i]["sungai"] : '-'}} cm</td>
+            <td>{{isset($reports[$i]) ? $reports[$i]["debit_tumpah"] : '-'}} cm</td>
         </tr>
     @endfor
     </tbody>

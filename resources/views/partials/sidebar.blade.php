@@ -22,6 +22,9 @@
                 <li>
                     <a href="{{route('report')}}" class="waves-effect"><i class="ti-calendar"></i><span>Report</span></a>
                 </li>
+                <li>
+                    <a href="{{ route('admin.logout') }}" class="waves-effect"><i class="ti-power-off"></i><span>Logout</span></a>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->

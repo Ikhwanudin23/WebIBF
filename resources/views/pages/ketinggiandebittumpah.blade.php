@@ -32,7 +32,7 @@
                                 <td>{{$no}}</td>
                                 <td>{{$dbt->created_at->format('d-m-Y')}}</td>
                                 <td>{{$dbt->created_at->format('h:i')}}</td>
-                                <td>{{$dbt->debittumpah}}</td>
+                                <td>{{$dbt->debittumpah}} cm</td>
 
                             </tr>
                             <?php $no++ ?>
