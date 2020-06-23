@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function (){
     Route::get('logout','Auth\LoginController@logout')->name('admin.logout');
+    Route::get('firebase','DashboardController@firebase')->name('dashboard.firebase');
 
     Route::resource('dashboard','DashboardController');
     Route::get('/sungai','ReportController@sungai')->name('sungai');
