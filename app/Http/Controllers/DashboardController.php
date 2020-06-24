@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Kreait\Firebase\Factory;
-//use Kreait\Firebase\ServiceAccount;
+use Kreait\Firebase\ServiceAccount;
 use Kreait\Laravel\Firebase;
 //use Kreait\Firebase\ServiceAccount;
 
