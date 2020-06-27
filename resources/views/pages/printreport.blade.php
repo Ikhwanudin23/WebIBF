@@ -6,11 +6,13 @@
     <style>
         .table {
             font-size: 15px;
+            border-collapse: collapse;
         }
 
         .table tr,.table td {
-            height: 20px;
-            text-align: center
+            height: 25px;
+            text-align: center;
+            border: 1px solid black;
         }
 
         .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th
@@ -34,7 +36,7 @@
         </td>
     </tr>
     <tr>
-        <td colspan="2"> <hr> </td>
+        <td colspan="2"> <hr style="height:1px;border:none;color:#333;background-color:#333;"> </td>
     </tr>
 </table>
 <body>
