@@ -10,9 +10,9 @@
         }
 
         .table tr,.table td {
-            height: 25px;
+            height: 22px;
             text-align: center;
-            border: 1px solid black;
+            border: 2px solid black;
         }
 
         .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th
