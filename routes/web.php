@@ -22,8 +22,6 @@ Route::group(['prefix' => 'admin'], function (){
 
 
     Route::get('dashboard','DashboardController@index')->name('dashboard');
-    Route::get('firebase','DashboardController@firebase')->name('firebase');
-
     Route::get('/sungai','ReportController@sungai')->name('sungai');
     Route::get('/debittumpah','ReportController@debittumpah')->name('debittumpah');
     Route::get('/report','ReportController@index')->name('report');

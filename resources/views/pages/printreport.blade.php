@@ -7,7 +7,8 @@
 <table align="center">
     <tr>
         {{--<td><img src="" width="70" height="70"></td>--}}
-        <td><center>
+        <td>
+            <center>
                 <font size="4">DINAS PEKERJAAN UMUM SUMBER DAYA AIR DAN PENATAAN RUANG</font><BR>
                 <font size="5"><b>BALAI PENGELOLAAN SUMBER DAYA AIR PEMALI COMAL</b></font><BR>
                 <font size="2">Jl. Dr.Sutomo No.53 Telp.(0283)-351011 Fax.0283-356259, Kode Pos 52113, Tegal</font><BR>

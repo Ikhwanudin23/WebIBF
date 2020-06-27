@@ -9,7 +9,7 @@
 <script src="{{asset('assets/pages/dashboard.js')}}"></script>
 <script src="{{asset('assets/js/app.js')}}"></script>
 
-!-- Required datatable js -->
+<!-- Required datatable js -->
 <script src="{{ asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{ asset('assets/plugins/datatables/dataTables.bootstrap4.min.js')}}"></script>
 <!-- Buttons examples -->

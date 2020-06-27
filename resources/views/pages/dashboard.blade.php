@@ -22,8 +22,8 @@
                             </div>
                             <h5 class="font-16 text-uppercase mt-0 text-white-50">Debit</h5>
                             @foreach($debittumpah as $dbt)
-                            <h4 id="debit" class="font-500">{{$dbt->ketinggian}} </h4>
-                                <h5 id="status">Aman</h5>
+                            <h4 id="debit" class="font-500"> </h4>
+                                <h5 id="statusd"></h5>
 
                             @endforeach
 
@@ -44,8 +44,8 @@
                             </div>
                             <h5 class="font-16 text-uppercase mt-0 text-white-50">Sungai</h5>
                             @foreach($sungai as $sg)
-                            <h4 id="sungai" class="font-500">{{$sg->ketinggian}}</h4>
-                                <h5 id="status">Aman</h5>
+                            <h4 id="sungai" class="font-500"></h4>
+                                <h5 id="statuss"></h5>
                             @endforeach
 
                         </div>
@@ -80,48 +80,40 @@
         <!-- end row --></div>
     <!-- container-fluid -->
 
-    <script src="https://js.pusher.com/6.0/pusher.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
     <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBvtK_grzpMJFPd6HVhNVqLA9zf1xMYBGs",
+            authDomain: "ibrebesf.firebaseapp.com",
+            databaseURL: "https://ibrebesf.firebaseio.com",
+            projectId: "ibrebesf",
+            storageBucket: "ibrebesf.appspot.com",
+            messagingSenderId: "463737117362",
+            appId: "1:463737117362:web:2aaea7fd009c77b3b287ab",
+            measurementId: "G-PVEEM9035Y"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // const analityc = firebase.analytics();
+        // console.log(analityc)
+        var refirebase = firebase.database().ref('/Raspi3/');
+        // console.log(refirebase)
+        refirebase.on('value', function (snapshot) {
+            const debit = document.querySelector('#debit');
+            debit.innerText = snapshot.child('Debit/Ketinggian').val();
 
-        // Enable pusher logging - don't include this in production
-        // Pusher.logToConsole = true;
-        const sungai = document.querySelector('#sungai');
-       const debit = document.querySelector('#debit');
+            const statusd = document.querySelector('#statusd');
+            statusd.innerText = snapshot.child('Debit/Status').val();
 
-        const status = document.querySelector('#status');
+            const sungai = document.querySelector('#sungai');
+            sungai.innerText = snapshot.child('Sungai/Ketinggian').val();
 
-        var pusher = new Pusher('362f1f8218cb607ebc5d', {
-            cluster: 'ap1',
-            // encrypted: true
-        });
+            const statuss = document.querySelector('#statuss');
+            statuss.innerText = snapshot.child('Sungai/Status').val();
 
-        var channel = pusher.subscribe('flood');
-        channel.bind('App\\Events\\FloodEvent', function(data) {
-            console.log(data);
-            if(data.message.sungai !== undefined){
-                sungai.innerHTML = data.message.sungai;
-                //ketinggian.innerHTML = data.message.ketinggiand;
-                if(data.message.status == 1){
-                    status.innerHTML = 'Aman';
-                }else if(data.message.status == 2){
-                    status.innerHTML = 'Tidak aman';
-                }else {
-                    status.innerHTML = 'Bahaya';
-                }
-            }
-
-            if(data.message.debit !== undefined){
-                debit.innerHTML = data.message.debit;
-                //ketinggian.innerHTML = data.message.ketinggiand;
-                if(data.message.status == 1){
-                    status.innerHTML = 'Aman';
-                }else if(data.message.status == 2){
-                    status.innerHTML = 'Tidak aman';
-                }else {
-                    status.innerHTML = 'Bahaya';
-                }
-            }
-            // alert(JSON.stringify(data));
         });
     </script>
 @endsection
