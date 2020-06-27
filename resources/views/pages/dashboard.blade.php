@@ -21,11 +21,9 @@
                                 <img src="assets/images/services-icon/01.png" alt="">
                             </div>
                             <h5 class="font-16 text-uppercase mt-0 text-white-50">Debit</h5>
-                            @foreach($debittumpah as $dbt)
                             <h4 id="debit" class="font-500"> </h4>
                                 <h5 id="statusd"></h5>
 
-                            @endforeach
 
                         </div>
                         <div class="pt-2">
@@ -43,10 +41,8 @@
                                 <img src="assets/images/services-icon/02.png" alt="">
                             </div>
                             <h5 class="font-16 text-uppercase mt-0 text-white-50">Sungai</h5>
-                            @foreach($sungai as $sg)
                             <h4 id="sungai" class="font-500"></h4>
                                 <h5 id="statuss"></h5>
-                            @endforeach
 
                         </div>
                         <div class="pt-2">
