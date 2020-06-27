@@ -24,8 +24,8 @@
         }
     </style>
 </head>
-{{--<div class="d-flex justify-content-center mb-2 mt-2">--}}
-{{--<img src="{{asset('assets/images/pemkabbrebes.png')}}" width="70" height="70">--}}
+{{--<div align="center">--}}
+{{--<img src="{{asset('assets/images/logomin.png')}}">--}}
 {{--</div>--}}
 <div align="center">
     {{--<tr>--}}

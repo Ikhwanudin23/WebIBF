@@ -111,7 +111,7 @@ class ReportController extends Controller
 
         $nama_bulan = $arr_bulan[$bulan-1];
 
-        $pdf =PDF::loadview('pages.printreport', compact(['reports','bulan','tanggal', 'nama_bulan']));
+        $pdf =PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->loadview('pages.printreport', compact(['reports','bulan','tanggal', 'nama_bulan']));
         return $pdf->stream();
 
 //        return view('pages.printreport', compact(['reports','bulan','tanggal', 'nama_bulan']));
