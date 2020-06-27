@@ -13,8 +13,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{route('search')}}" method="post" class="row">
-                            @csrf
+                        <form action="{{route('search')}}" method="get" class="row mb-2">
                             <div class="form-group col-md-4">
                                 <label> Bulan </label>
                                 <select class="form-control" name="bulan">
@@ -32,15 +31,11 @@
                                     <option value="12"{{$bulan == '12' ? 'selected' : ''}}>Desember</option>
                                 </select>
                             </div>
-                            <div class="col-md-4 mt-4">
+                            <div class="col-md-4" style="margin-top: 30px">
                                 <button type="submit" class="btn btn-success">Cari</button>
+                                <a href="{{route('printreport', $bulan)}}" class="btn btn-warning" target="_blank"> Print</a>
                             </div>
-
-
-
                         </form>
-                        <br>
-
 
 
                         <table class="table table-bordered dt-responsive nowrap"
@@ -57,10 +52,10 @@
 
                             @for($i = 1; $i <= $tanggal; $i++)
                                 <tr>
-                                    <td>{{$i}}</td>
+                                    <td><strong> {{$i}} </strong></td>
                                     {{--<td>{{isset($reports[$i]) ? $reports[$i]["created_at"]->format('d-m-Y') : '-'}}</td>--}}
-                                    <td>{{isset($reports[$i]) ? $reports[$i]["sungai"] : '-'}} cm </td>
-                                    <td>{{isset($reports[$i]) ? $reports[$i]["debit_tumpah"] : '-'}} cm </td>
+                                    <td> <strong> {{isset($reports[$i]) ? $reports[$i]["sungai"].' cm' : '-'}} </strong></td>
+                                    <td><strong> {{isset($reports[$i]) ? $reports[$i]["debit_tumpah"].' cm' : '-'}} </strong> </td>
                                 </tr>
                             @endfor
                             </tbody>

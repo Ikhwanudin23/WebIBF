@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
+//Route::get('print')
+
 Route::group(['prefix' => 'admin'], function (){
     Route::get('logout','Auth\LoginController@logout')->name('admin.logout');
 
@@ -25,7 +27,7 @@ Route::group(['prefix' => 'admin'], function (){
     Route::get('/sungai','ReportController@sungai')->name('sungai');
     Route::get('/debittumpah','ReportController@debittumpah')->name('debittumpah');
     Route::get('/report','ReportController@index')->name('report');
-    Route::post('report/search','ReportController@search')->name('search');
+    Route::get('report/search','ReportController@search')->name('search');
     Route::get('report/printreport/{bulan}','ReportController@printreport')->name('printreport');
 
 });

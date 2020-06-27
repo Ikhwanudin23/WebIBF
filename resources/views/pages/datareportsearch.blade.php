@@ -39,7 +39,6 @@
 
                                 <div class="col-md-12">
                                     <a href="{{route('printreport', $bulan)}}" class="btn btn-warning"> Print</a>
-
                                 </div>
 
                         </form>
@@ -63,8 +62,8 @@
                                 <tr>
                                     <td>{{$i}}</td>
                                     {{--<td>{{isset($reports[$i]) ? $reports[$i]["created_at"]->format('d-m-Y') : '-'}}</td>--}}
-                                    <td>{{isset($reports[$i]) ? $reports[$i]["sungai"] : '-'}} cm</td>
-                                    <td>{{isset($reports[$i]) ? $reports[$i]["debit_tumpah"] : '-'}} cm</td>
+                                    <td>{{isset($reports[$i]) ? $reports[$i]["sungai"].' cm' : '-'}} cm</td>
+                                    <td>{{isset($reports[$i]) ? $reports[$i]["debit_tumpah"].' cm' : '-'}} cm</td>
                                 </tr>
                             @endfor
                             </tbody>

@@ -85,7 +85,7 @@ class ReportController extends Controller
                 'debit_tumpah' => $item->debittumpah
             ];
         }
-        return view('pages.datareportsearch', compact('reports', 'bulan', 'tanggal'));
+        return view('pages.datareport', compact('reports', 'bulan', 'tanggal'));
     }
 
     public function printreport($bulan){
@@ -113,6 +113,8 @@ class ReportController extends Controller
 
         $pdf =PDF::loadview('pages.printreport', compact(['reports','bulan','tanggal', 'nama_bulan']));
         return $pdf->stream();
+
+//        return view('pages.printreport', compact(['reports','bulan','tanggal', 'nama_bulan']));
 
     }
 }
