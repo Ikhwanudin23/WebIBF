@@ -9,10 +9,13 @@
             border-collapse: collapse;
         }
 
+        .table-laporan th,.table-laporan td {
+            border: 1px solid #000;
+        }
+
         .table tr,.table td {
             height: 22px;
             text-align: center;
-            border: 2px solid black;
         }
 
         .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th
@@ -24,22 +27,25 @@
 {{--<div class="d-flex justify-content-center mb-2 mt-2">--}}
 {{--<img src="{{asset('assets/images/pemkabbrebes.png')}}" width="70" height="70">--}}
 {{--</div>--}}
-<table align="center">
-    <tr>
-        <td>
-            <center>
-                <font size="4">DINAS PEKERJAAN UMUM SUMBER DAYA AIR DAN PENATAAN RUANG</font><BR>
-                <font size="5"><b>BALAI PENGELOLAAN SUMBER DAYA AIR PEMALI COMAL</b></font><BR>
-                <font size="2">Jl. Dr.Sutomo No.53 Telp.(0283)-351011 Fax.0283-356259, Kode Pos 52113, Tegal</font><BR>
-                <font size="2"><i>Email :  balai_psdapc@yahoo.co.id, Website : bpsda-pemali.jatengprov.go.id</i><BR></font>
-            </center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2"> <hr style="height:1px;border:none;color:#333;background-color:#333;"> </td>
-    </tr>
-</table>
+<div align="center">
+    {{--<tr>--}}
+    {{--<td>--}}
+    <center>
+        <font size="4">DINAS PEKERJAAN UMUM SUMBER DAYA AIR DAN PENATAAN RUANG</font><BR>
+        <font size="5"><b>BALAI PENGELOLAAN SUMBER DAYA AIR PEMALI COMAL</b></font><BR>
+        <font size="2">Jl. Dr.Sutomo No.53 Telp.(0283)-351011 Fax.0283-356259, Kode Pos 52113, Tegal</font><BR>
+        <font size="2"><i>Email :  balai_psdapc@yahoo.co.id, Website : bpsda-pemali.jatengprov.go.id</i><BR></font>
+    </center>
+    {{--</td>--}}
+    {{--</tr>--}}
+    {{--<tr>--}}
+    {{--<td colspan="2">--}}
+        <hr style="height:1px;border:none;color:#333;background-color:#333;">
+    {{--</td>--}}
+    {{--</tr>--}}
+</div>
 <body>
+
 <center>
     <font size="3"><b>Report Data Debit Air Sungai Pemali</b></font>
     <br>
@@ -47,8 +53,8 @@
 </center>
 
 <br>
-<table id="example1"  class="table table-bordered dt-responsive"
-       style="border-collapse: collapse; border-spacing: 2; width: 100%;">
+<table id="example1"  class="table table-laporan"
+       style="border-collapse: collapse; width: 100%;">
     <thead>
     <tr>
         <th>Tanggal</th>
