@@ -34,7 +34,7 @@
 </center>
 
 <br>
-<table id="example1" class="table table-laporan"
+<table id="example1" class="table table-laporan" align="center"
        style="border-collapse: collapse; width: 100%;" border="1">
     <thead>
     <tr>
