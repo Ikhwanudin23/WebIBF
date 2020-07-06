@@ -3,6 +3,23 @@
 <head>
     <title>Laporan Data Debit Air Pemali</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        .table {
+            font-size: 15px;
+            border-collapse: collapse;
+        }
+        .table-laporan th,.table-laporan td {
+            border: 1px solid #000;
+        }
+        .table tr,.table td {
+            height: 22px;
+            text-align: center;
+        }
+        .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th
+        {
+            padding:0;
+        }
+    </style>
 
 </head>
 {{--<div align="center">--}}
