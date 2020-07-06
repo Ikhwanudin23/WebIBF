@@ -7,6 +7,7 @@ use Barryvdh\DomPDF\Facade as PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ReportController extends Controller
 {
@@ -29,7 +30,7 @@ class ReportController extends Controller
         //$report = Report::whereDay('created_at', Carbon::now()->format('d'))->get();
 
         //$report = Report::select(DB::raw('AVG(sungai) as sungai, AVG(debittumpah) as debittumpah, DATE(created_at)created_at'))
-            //->groupBy('created_at');
+        //->groupBy('created_at');
 
         $bulan = Carbon::now()->month;
         $report = Report::select('created_at', DB::raw('AVG(sungai) as sungai'), DB::raw('AVG(debittumpah) as debittumpah'))
@@ -88,7 +89,8 @@ class ReportController extends Controller
         return view('pages.datareport', compact('reports', 'bulan', 'tanggal'));
     }
 
-    public function printreport($bulan){
+    public function printreport($bulan)
+    {
         $report = Report::select('created_at', DB::raw('AVG(sungai) as sungai'), DB::raw('AVG(debittumpah) as debittumpah'))
             ->groupBy('created_at')->whereMonth('created_at', $bulan)->get();
 
@@ -109,12 +111,15 @@ class ReportController extends Controller
         $arr_bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus',
             'September', 'Oktober', 'November', 'Desember'];
 
-        $nama_bulan = $arr_bulan[$bulan-1];
+        $nama_bulan = $arr_bulan[$bulan - 1];
+
+
 
         $pdf =PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->loadview('pages.printreport', compact(['reports','bulan','tanggal', 'nama_bulan']));
         return $pdf->stream();
 
-//        return view('pages.printreport', compact(['reports','bulan','tanggal', 'nama_bulan']));
 
     }
+
+
 }

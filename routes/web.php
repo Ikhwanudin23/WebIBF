@@ -29,6 +29,7 @@ Route::group(['prefix' => 'admin'], function (){
     Route::get('/report','ReportController@index')->name('report');
     Route::get('report/search','ReportController@search')->name('search');
     Route::get('report/printreport/{bulan}','ReportController@printreport')->name('printreport');
+    Route::get('test','ReportController@test');
 
 });
 
